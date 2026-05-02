@@ -1,0 +1,1 @@
+{{ test_positive_values(column_name="price", model=get_where_subquery(ref('dim_listings_cleansed'))) }}

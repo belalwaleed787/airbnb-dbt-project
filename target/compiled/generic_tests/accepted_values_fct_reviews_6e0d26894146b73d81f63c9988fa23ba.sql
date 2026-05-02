@@ -1,0 +1,22 @@
+
+    
+    
+
+with all_values as (
+
+    select
+        REVIEW_SENTIMENT as value_field,
+        count(*) as n_records
+
+    from AIRBNB.DEV.fct_reviews
+    group by REVIEW_SENTIMENT
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'positive','neutral','negative'
+)
+
+

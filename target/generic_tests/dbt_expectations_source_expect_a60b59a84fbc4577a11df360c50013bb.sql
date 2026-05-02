@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_column_values_to_match_regex(column_name="price", model=get_where_subquery(source('airbnb', 'listings')), regex="^\\\\$[0-9][0-9\\\\.]+$") }}

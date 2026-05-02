@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_table_row_count_to_equal_other_table(compare_model=source('airbnb','listings'), model=get_where_subquery(ref('dim_listings_w_hosts'))) }}

@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="REVIEW_SENTIMENT", model=get_where_subquery(ref('fct_reviews')), values=["positive","neutral","negative"]) }}

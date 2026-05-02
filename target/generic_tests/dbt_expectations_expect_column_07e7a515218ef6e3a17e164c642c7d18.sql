@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_column_values_to_be_of_type(column_name="price", column_type="number", model=get_where_subquery(ref('dim_listings_w_hosts'))) }}
