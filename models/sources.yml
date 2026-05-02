@@ -8,12 +8,14 @@ sources:
          - name: room_type
            tests:
             - dbt_expectations.expect_column_distinct_count_to_equal:
-                value: 4
+                arguments:
+                  value: 4
 
          - name: price
            tests:
             - dbt_expectations.expect_column_values_to_match_regex:
-                regex: "^\\\\$[0-9][0-9\\\\.]+$"
+                arguments:
+                  regex: "^\\\\$[0-9][0-9\\\\.]+$"
 
       - name: hosts
         identifier: raw_hosts
@@ -25,3 +27,8 @@ sources:
           freshness:
             warn_after: {count: 1, period: hour}
             error_after: {count: 24, period: hour}
+      - name: lineage_events
+        identifier: lineage_events
+
+      - name: lineage_links
+        identifier: lineage_links 

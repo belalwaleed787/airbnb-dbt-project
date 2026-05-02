@@ -1,3 +1,4 @@
+
 WITH raw_reviews AS (
     SELECT
         *

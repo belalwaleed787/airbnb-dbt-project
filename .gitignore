@@ -3,3 +3,8 @@ target/
 dbt_packages/
 logs/
 dbt_internal_packages/
+# Altimate Datamates skill files (auto-generated)
+.github/instructions/datamate/
+.github/instructions/snowflake/
+.github/instructions/general-awareness.instructions.md
+.github/instructions/.managed-skills.json

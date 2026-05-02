@@ -1,3 +1,10 @@
+{# {{ config(
+    materialized='table',
+    post_hook="{{ log_row_lineage('raw_listings') }}"
+) }}
+ #}
+
+
 WITH raw_listings AS (
     SELECT
         *

@@ -20,6 +20,8 @@ SELECT
     h.host_name,
     h.is_superhost as host_is_superhost,
     l.created_at,
-    GREATEST(l.updated_at, h.updated_at) as updated_at
+    GREATEST(l.updated_at, h.updated_at) as updated_at,
+    l.listing_id+333333 as surrogate_keys
+
 FROM l
 LEFT JOIN h ON (h.host_id = l.host_id)
